@@ -57,9 +57,9 @@ global.dikit = "dikit lagi, semangat ya :')"
 global.multiplier = 100 // The higher, The harder levelup
 
 //============= Thumb And Image ================//
-global.pp = 'https://telegra.ph/file/39bbded9693c9338069fd.jpg'
-global.image = 'https://telegra.ph/file/39bbded9693c9338069fd.jpg'
-global.thumbfoto = 'http://telegra.ph/file/29f2d451412ae151a2dfb.jpg'
+global.pp = 'https://media.discordapp.net/attachments/892311236887334931/939886004993675294/sgsgh.png'
+global.image = 'https://media.discordapp.net/attachments/892311236887334931/939886004993675294/sgsgh.png'
+global.thumbfoto = 'https://media.discordapp.net/attachments/892311236887334931/939886004993675294/sgsgh.png'
 
 //=========== Requirements ==========//
 
