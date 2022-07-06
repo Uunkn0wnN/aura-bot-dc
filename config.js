@@ -36,18 +36,18 @@ global.wait = '「 ⏱️ 」Harap tunggu...'
 global.eror = '「❗」Server ERROR!'
 
 //========Url Template Buttons=========//
-global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
-global.urlnya = "https://www.instagram.com/mas_.giyuu"
+global.dtu = 'Discord'
+global.urlnya = "https://discord.gg/UFTXkxRrWT"
 
 //============= callButtons =============//
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '+62 813-9322-7036'
+global.phn = '+62 898-3755-600'
 
 //============= Watermark Bot and Sticker =============//
-global.wm = '© AuraBot'
-global.author = '© AuraBot'
-global.packname ='RFIunknown'
-global.namabot = 'AuraBot'
+global.wm = 'github.com/Uunkn0wnN'
+global.author = 'github.com/Uunkn0wnN'
+global.packname ='github.com/Uunkn0wnN'
+global.namabot = 'github.com/Uunkn0wnN'
 
 //============= Games ================//
 global.benar = '_*Benar✅*_'
