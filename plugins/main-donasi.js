@@ -1,4 +1,4 @@
-const qrku = "http://telegra.ph/file/4728cfbd53c6cbc990413.png"
+const qrku = "https://telegra.ph/file/db0bee6282701eec02083.png"
 
 let handler = async (m, { conn, usedPrefix }) => conn.sendButtonImg(m.chat, qrku, `
 ╭─「 Donasi • Dana 」
