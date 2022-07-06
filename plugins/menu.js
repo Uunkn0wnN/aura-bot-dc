@@ -7,7 +7,7 @@ const defaultMenu = {
   before: `
 ┌─〔 %me 〕
 ├ Hai, *%name!*
-├ Uptime *%uptime*
+├ runtime *%uptime*
 ├ Database *%totalreg*
 └────
 %readmore`.trim(),
@@ -179,107 +179,107 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       {
         title: 'List Menu ' + namabot,       
         rows: [
-          { title: `Pemilik Bot[👨‍💻]`, 
+          { title: `┃Bot owner`, 
            "description": "Nomor Pemilik Bot (owner)",
            rowId: `${_p} creator` },
 
-          { title: `Syarat Ketentuan dan Peraturan[📜]`, 
+          { title: `┃Syarat Ketentuan dan Peraturan`, 
            "description": "Harap membaca Peraturan demi kenyamanan kita bersama",
            rowId: `${_p} rules` },
 
-          { title: `Group Official AuraBot[🎊] `, 
+          { title: `┃Server official`, 
            "description": "Gabung untuk mendapatkan informasi mengenai bot atau sekedar meramaikan",
            rowId: `${_p} auragc` },
 
-          { title: 'Semua Perintah', 
+          { title: '┃Semua Perintah', 
            "description": "Menu Semua Perintah",
            rowId: `${_p}? all` },
           
-          { title: 'Game',
+          { title: '┃Game',
            "description": "Menu untuk Game",
            rowId: `${_p}? game` },
           
-          { title: 'XP', 
+          { title: '┃XP', 
            "description": "Menu untuk XP",
            rowId: `${_p}? xp` },
           
-          { title: 'Stiker',
+          { title: '┃Stiker',
            "description": "Menu untuk Sticker",
            rowId: `${_p}? stiker` },
           
-          { title: 'Kerang Ajaib',
+          { title: '┃Kerang Ajaib',
            "description": "Puja kerang ajaib...",
            rowId: `${_p}? kerangajaib` },
           
-          { title: 'Quotes', 
+          { title: '┃Quotes', 
            "description": "Menu untuk Quotes",
            rowId: `${_p}? quotes` },
           
-          { title: 'Grup', 
+          { title: '┃Grup', 
            "description": "Menu untuk Group",
            rowId: `${_p}? grup` },
           
-          { title: 'Premium',
+          { title: '┃Premium',
            "description": "Menu untuk Premium Users",
            rowId: `${_p}? premium` },
           
-          { title: 'Internet',
+          { title: '┃Internet',
            "description": "Menu untuk menjelajahi Internet...",
            rowId: `${_p}? internet` },
           
-          { title: 'Anonymous',
+          { title: '┃Anonymous',
            "description": "Menu untuk Anonymous Chat",
            rowId: `${_p}? anonymous` },
 
-          { title: 'Menu Anime',
+          { title: '┃Menu Anime',
            "description": "Menu untuk Wibu",
            rowId: `${_p}? anime` },
 
-          { title: 'Menu NSFW',
+          { title: '┃Menu NSFW',
            "description": "Menu 18+",
            rowId: `${_p}? nsfw` },
           
-          { title: 'Nulis & Logo',
+          { title: '┃Nulis & Logo',
            "description": "Menu untuk Nulis & Logo",
            rowId: `${_p}? nulis` },
           
-          { title: 'Downloader',
+          { title: '┃Downloader',
            "description": "Menu Downloader",
            rowId: `${_p}? downloader` },
           
-          { title: 'Tools',
+          { title: '┃Tools',
            "description": "Menu untuk Tools",
            rowId: `${_p}? tools` },
           
-          { title: 'Fun',
+          { title: '┃Fun',
            "description": "Menu Hiburan",
            rowId: `${_p}? fun`},
           
-          { title: 'Database',
+          { title: '┃Database',
            "description": "Menu untuk Database",
            rowId: `${_p}? database` },
           
-          { title: 'Vote & Absen',
+          { title: '┃Vote & Absen',
            "description": "Menu untuk Vote & Absen",
            rowId: `${_p}? vote` },
           
-          { title: "Islami",
+          { title: "┃Islami",
             "description": "Menu Islami",
            rowId: `${_p}? quran` },
           
-          { title: 'Pengubah Suara',
+          { title: '┃Pengubah Suara',
            "description": "Menu Pengubah Suara",
            rowId: `${_p}? audio` },
 
-          { title: 'Info',
+          { title: '┃Info',
            "description": "Menu untuk Info",
            rowId: `${_p}? info` },
           
-          { title: 'Tanpa Kategori',
+          { title: '┃Tanpa Kategori',
            "description": "Menu Tanpa Kategori",
            rowId: `${_p}? tanpakategori` },
           
-          { title: 'Owner',
+          { title: '┃Owner',
            "description": "Menu Khusus Owner",
            rowId: `${_p}? owner` },
         ]
@@ -287,10 +287,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     ]
       const listMessage = {
       text: 'Berikut ini adalah daftar menu AuraBot.',
-      footer: "Silahkan tekan tombol \"Click Here\" untuk melihat sub-menu AuraBot.\n\nJika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
+      footer: "Silahkan tekan tombol \"Browse Commands\" untuk melihat sub-menu AuraBot",
       mentions: await conn.parseMention(judul),
       title: judul,
-      buttonText: "Click Here",
+      buttonText: "Browse Commands",
       sections
     }
 
