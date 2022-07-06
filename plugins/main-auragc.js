@@ -5,18 +5,18 @@ let handler = async(m, { conn }) => {
         let gc1 = '6281393227036-120363037529652885@g.us'
         let _gc1 = 'https://chat.whatsapp.com/' + await conn.groupInviteCode(gc1)
         let caption = `
-*Join juga group official AuraBot!*
+*Join juga official Bot!*
 Sekedar meramaikan, atau juga jika ada informasi mengenai bot.
 
-*Group*
-${_gc1}
+*join*
+https://discord.gg/UFTXkxRrWT
 
-Harap patuhi rules dan peraturan pada masing masing group ya! Terimakasih.
+Harap patuhi rules dan peraturan ya! Terimakasih.
 `.trim()
         await conn.reply(m.chat, caption, m, { contextInfo: {
             externalAdReply: {
               sourceUrl: 'https://rfiunknown.github.io/dist/',
-              title: 'Official group',
+              title: 'Official server',
               body: 'AuraBot',
               thumbnail: pp
             }
@@ -25,25 +25,27 @@ Harap patuhi rules dan peraturan pada masing masing group ya! Terimakasih.
         let res = await fetch('https://raw.githubusercontent.com/RFIunknown/AuraBot-server/main/files/src.json')
         let json = await res.json()
         let tulisan = `
-*Join juga group official AuraBot!*
+Join juga official Bot!*
+
 Sekedar meramaikan, atau juga jika ada informasi mengenai bot.
 
-*Group*
-${json.links[0]}
+*join*
 
-Harap patuhi rules dan peraturan pada masing masing group ya! Terimakasih.
+https://discord.gg/UFTXkxRrWT
+
+Harap patuhi rules dan peraturan ya! Terimakasih.
 `.trim()
     await conn.reply(m.chat, tulisan, m, { contextInfo: {
         externalAdReply: {
             sourceUrl: 'https://rfiunknown.github.io/dist/',
-            title: 'Official group',
+            title: 'Official server',
             body: 'AuraBot',
             thumbnail: pp
         }
     }})
     }
 }
-handler.help = ['groupofficial']
+handler.help = ['serverofficial']
 handler.tags = ['main']
 handler.command = /^auragc|gr(u|ou)(p|b)official|gcofficial$/i
 module.exports = handler
