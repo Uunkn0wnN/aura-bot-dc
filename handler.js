@@ -380,7 +380,7 @@ module.exports = {
                                 console.error(e)
                             }
                         }
-                        if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
+                        if (m.limit) m.reply(+ m.limit + ' Limit telah terpakai')
                         //jika risih matiin aja 
                     }
                     break
@@ -445,7 +445,7 @@ module.exports = {
                 if (chat.welcome) {
                     let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                     for (let user of participants) {
-                        let pp = 'https://telegra.ph/file/2d06f0936842064f6b3bb.png'
+                        let pp = 'https://telegra.ph/file/a816b435e5945e5cb429f.jpg'
                         try {
                             pp = await this.profilePictureUrl(user, 'image')
                         } catch (e) {
@@ -456,18 +456,18 @@ module.exports = {
                             let wel = API('hardianto', '/api/welcome3', {
                                 profile: pp,
                                 name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
+                                bg: 'https://telegra.ph/file/be2035caaed914178c84c.jpg',
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
                             let lea = API('hardianto', '/api/goodbye3', {
                                 profile: pp,
                                 name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
+                                bg: 'https://telegra.ph/file/be2035caaed914178c84c.jpg',
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
-                            await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')
+                            await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'welcome' : 'goodbye', action === 'add' ? '.intro' : 'FokusID')
                         }
                     }
                 }
@@ -586,7 +586,7 @@ function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
 
-global.thumb = 'https://telegra.ph/file/61f2d6d9694b49a2ce7aa.jpg'
+global.thumb = 'https://telegra.ph/file/a816b435e5945e5cb429f.jpg'
 
 global.flaaa = [
  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
