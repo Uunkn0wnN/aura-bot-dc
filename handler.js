@@ -320,16 +320,16 @@ module.exports = {
                     }
                     m.isCommand = true
                     let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
-                    if (xp > 200) m.reply('Ngecit -_-') // Hehehe
+                    if (xp > 200) m.reply('cheater 🤣') // Hehehe
                     else m.exp += xp
                     if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                        this.sendButton(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, wm, 'Buy', '.buy', m)
-                        // this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+                        this.sendButton(m.chat, `Your limit is up, please buy via *${usedPrefix}buy*`, wm, 'Buy', '.buy', m)
+                        // this.reply(m.chat, `Your limit is up, please buy via *${usedPrefix}buy*`, m)
                         continue // Limit habis
                     }
                     if (plugin.level > _user.level) {
-                        this.sendButton(m.chat, `diperlukan level ${plugin.level} untuk menggunakan perintah ini. Level kamu ${_user.level}`, wm, `Levelup`, `.levelup`, m)
-                        // this.reply(m.chat, `diperlukan level ${plugin.level} untuk menggunakan perintah ini. Level kamu ${_user.level}`, m)
+                        this.sendButton(m.chat, `required level ${plugin.level} to use this command. Your level ${_user.level}`, wm, `Levelup`, `.levelup`, m)
+                        // this.reply(m.chat, `required level ${plugin.level} to use this command. Your level ${_user.level}`, m)
                         continue // If the level has not been reached
                     }
                     let extra = {
@@ -451,19 +451,19 @@ module.exports = {
                         } catch (e) {
 
                         } finally {
-                            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
-                                (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user))
+                            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || '[WELCOME], @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
+                                (chat.sBye || this.bye || conn.bye || '[GOODBYE], @user!')).replace('@user', await this.getName(user))
                             let wel = API('hardianto', '/api/welcome3', {
                                 profile: pp,
                                 name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/be2035caaed914178c84c.jpg',
+                                bg: 'https://telegra.ph/file/d775c292e8d394e02312b.jpg',
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
                             let lea = API('hardianto', '/api/goodbye3', {
                                 profile: pp,
                                 name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/be2035caaed914178c84c.jpg',
+                                bg: 'https://telegra.ph/file/0a7fcd1552be39b1188f1.jpg',
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
@@ -507,7 +507,7 @@ module.exports = {
             if (groupUpdate.restrict == false) text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || '```Group has been only admin!')
             //console.log('=============\n\ngroupsUpdate \n\n============\n\n' + await groupUpdate)
             if (!text) continue
-            await this.sendButton(id, text, wm, 'Matikan Fitur', `.off detect`, global.ftroli, { contextInfo: { mentionedJid: this.parseMention(text) }, mentions: await this.parseMention(text) })
+            await this.sendButton(id, text, wm, 'Turn off this feature', `.off detect`, global.ftroli, { contextInfo: { mentionedJid: this.parseMention(text) }, mentions: await this.parseMention(text) })
         }
     },
     async delete({ remoteJid, fromMe, id, participant }) {
@@ -518,10 +518,10 @@ module.exports = {
         let chat = global.db.data.chats[msg.key.remoteJid] || {}
         if (chat.delete) return
         this.sendButton(msg.key.remoteJid, `
-Terdeteksi @${participant.split`@`[0]} telah menghapus pesan
-Untuk mematikan fitur ini, ketik
+@${participant.split`@`[0]} has been detected delete message
+To turn off this feature, type
 *.enable delete*
-`.trim(), wm, 'Matikan Fitur ini', '.enable delete', msg, {
+`.trim(), wm, 'Turn off this feature', '.enable delete', msg, {
             mentions: [participant]
         })
         await this.delay(1000)
@@ -531,18 +531,18 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = async (type, m, conn) => {
     let msg = {
-        rowner: `Perintah ini hanya dapat digunakan oleh _*Owner Uunkn0wnN*_`,
-        owner: `Perintah ini hanya dapat digunakan oleh _*Owner Uunkn0wnN*_`,
-        mods: `Perintah ini hanya dapat digunakan oleh *Moderator*`,
-        premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-        group: `Perintah ini hanya dapat digunakan di grup!`,
-        private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-        admin: 'Perintah ini hanya untuk *Admin* grup!',
-        botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar milrato.18*',
-        nsfw: `NSFW tidak aktif, Silahkan hubungi Owner Uunkn0wnN untuk mengaktifkan fitur ini!`,
-        rpg: `RPG tidak aktif, Silahkan hubungi Owner Uunkn0wnN Untuk mengaktifkan fitur ini!`,
-        restrict: 'Fitur ini di *disable*!'
+        rowner: `This command can only be used by _*Owner Uunkn0wnN*_`,
+        owner: `This command can only be used by _*Owner Uunkn0wnN*_`,
+        mods: `This command can only be used by *Moderators*`,
+        premium: 'This command is only for _*Premium*_ members!',
+        group: `This command can only be used inside *groups* !`,
+        private: 'This command can only be used in Private Chat!',
+        admin: 'This command is only for *Admin* group!',
+        botAdmin: 'Make the bot an * Admin * to use this command!',
+        unreg: 'Please register to use this feature by typing:\n\n*#daftar name.age*\n\nExample: *#daftar milrato.18*',
+        nsfw: `NSFW is not active, Please contact _*Owner Unkn0wnN*_ to activate this feature!`,
+        rpg: `RPG is not active, Please contact _*Owner Unkn0wnN*_ to activate this feature!`,
+        restrict: 'This feature is *disabled*!'
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })
 }
